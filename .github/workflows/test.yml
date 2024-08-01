@@ -13,23 +13,19 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
         with:
           submodules: recursive
-
       - name: Install Foundry
-        uses: foundry-rs/foundry-toolchain@v1
+        uses: foundry-rs/foundry-toolchain@362aa1be8f31305295acb1032271acd5e9b99312 # v1.1.1
         with:
           version: nightly
-
       - name: Show Forge version
         run: |
           forge --version
-
       - name: Run Forge build
         run: |
           forge build --sizes
-
       - name: Run Forge tests
         run: |
           make test
