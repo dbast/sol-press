@@ -16,6 +16,9 @@ pre-commit:
 test:
 	forge test --gas-report -vvv
 
+coverage:
+	forge coverage --gas-report -vvv
+
 lib-update:
 	git submodule update --init
 
