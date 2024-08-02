@@ -29,3 +29,6 @@ jobs:
       - name: Run Forge tests
         run: |
           make test
+      - name: Run Forge tests with coverage
+        run: |
+          make coverage
