@@ -16,6 +16,10 @@ repos:
       - id: end-of-file-fixer
       - id: mixed-line-ending
       - id: trailing-whitespace
+  - repo: https://github.com/dbast/slither
+    rev: v1-test
+    hooks:
+      - id: slither
   - repo: local
     hooks:
       - id: forge_fmt
@@ -24,13 +28,6 @@ repos:
         files: \.sol$
         pass_filenames: false
         language: system
-      - id: slither
-        name: slither
-        entry: slither .
-        files: \.sol$
-        pass_filenames: false
-        language: python
-        additional_dependencies: [slither-analyzer==0.10.3]
       - id: solhint
         name: solhint
         entry: solhint '**/*.sol'
