@@ -20,7 +20,7 @@ repos:
     hooks:
       - id: forge_fmt
         name: forge fmt
-        entry: forge fmt .
+        entry: forge fmt forge fmt src script test
         files: \.sol$
         pass_filenames: false
         language: system
