@@ -14,10 +14,10 @@ pre-commit:
 	pre-commit run --all -v
 
 test:
-	forge test --gas-report -vvv
+	forge test --gas-report --show-progress -vvv
 
 coverage:
-	forge coverage --gas-report -vvv
+	forge coverage --gas-report --show-progress -vvv
 
 lib-update:
 	git submodule update --init
