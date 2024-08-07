@@ -16,7 +16,7 @@ jobs:
       - name: Install Foundry
         uses: foundry-rs/foundry-toolchain@8f1998e9878d786675189ef566a2e4bf24869773 # v1.2.0
         with:
-          # renovate datasource=github-releases depName=foundry-rs/foundry
+          # renovate datasource=github-releases depName=foundry-rs/foundry versioning=loose
           version: nightly-f2518c92c8743777a4941a91e4eb56dd3a96ff0f
       - uses: actions/setup-python@39cd14951b08e74b54015e9e001cdefcf80e669f # v5.1.1
         with:

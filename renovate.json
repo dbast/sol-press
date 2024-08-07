@@ -16,8 +16,9 @@
       "description": "Upgrade versions in Makefile",
       "fileMatch": ["Makefile"],
       "matchStrings": [
-        "# renovate\\sdatasource=(?<datasource>.*?)\\s+depName=(?<depName>.*?)\\s+([A-Za-z_][A-za-x0-9_]*)?VERSION\\s+\\?=\\s+(?<currentValue>.*)"
-      ]
+        "# renovate\\sdatasource=(?<datasource>.*?)\\s+depName=(?<depName>.*?)\\s+(versioning=(?<versioning>.*?)\\s+)?([A-Za-z_][A-za-x0-9_]*)?VERSION\\s+\\?=\\s+(?<currentValue>.*)"
+      ],
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
     }
   ]
 }

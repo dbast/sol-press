@@ -1,6 +1,6 @@
 SHELL := /bin/bash -o pipefail -o errexit
 
-# renovate datasource=github-releases depName=foundry-rs/foundry
+# renovate datasource=github-releases depName=foundry-rs/foundry versioning=loose
 FOUNDRY_VERSION ?= nightly-f2518c92c8743777a4941a91e4eb56dd3a96ff0f
 
 update: forge-update lib-update
