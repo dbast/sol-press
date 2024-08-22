@@ -16,6 +16,11 @@ repos:
       - id: end-of-file-fixer
       - id: mixed-line-ending
       - id: trailing-whitespace
+  - repo: https://github.com/Consensys/mythril
+    rev: 0717111a550c4d8bb0cb8eb14b4ee1c5ef13d6fe
+    hooks:
+      - id: mythril
+        exclude: ^(script|test)/
   - repo: local
     hooks:
       - id: forge_fmt
@@ -38,13 +43,6 @@ repos:
         pass_filenames: false
         language: node
         additional_dependencies: [solhint@5.0.2]
-      # - id: mythril
-      #   name: mythril
-      #   entry: myth analyze -a
-      #   files: \.sol$
-      #   pass_filenames: true
-      #   language: python
-      #   additional_dependencies: [mythril==0.24.8]
   - repo: https://github.com/jumanjihouse/pre-commit-hook-yamlfmt
     rev: 0.2.3
     hooks:
