@@ -21,6 +21,10 @@ repos:
     hooks:
       - id: mythril
         exclude: ^(script|test)/
+  - repo: https://github.com/crytic/slither
+    rev: 16fd330723aca93dc3342dee77340e4b344dc732
+    hooks:
+      - id: slither
   - repo: local
     hooks:
       - id: forge_fmt
@@ -29,13 +33,6 @@ repos:
         files: \.sol$
         pass_filenames: false
         language: system
-      - id: slither
-        name: slither
-        entry: slither .
-        files: \.sol$
-        pass_filenames: false
-        language: python
-        additional_dependencies: [slither-analyzer==0.10.3]
       - id: solhint
         name: solhint
         entry: solhint '**/*.sol'
