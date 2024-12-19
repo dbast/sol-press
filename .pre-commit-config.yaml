@@ -25,8 +25,8 @@ repos:
     rev: 16fd330723aca93dc3342dee77340e4b344dc732
     hooks:
       - id: slither
-  - repo: https://github.com/dbast/solhint
-    rev: v5.0.4-test3
+  - repo: https://github.com/protofire/solhint
+    rev: ded13a1235c93e7dcf4ba17ad367d84c8c5059f4
     hooks:
       - id: solhint
   - repo: local
