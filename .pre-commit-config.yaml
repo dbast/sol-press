@@ -25,6 +25,10 @@ repos:
     rev: 16fd330723aca93dc3342dee77340e4b344dc732
     hooks:
       - id: slither
+  - repo: https://github.com/protofire/solhint
+    rev: ded13a1235c93e7dcf4ba17ad367d84c8c5059f4
+    hooks:
+      - id: solhint
   - repo: local
     hooks:
       - id: forge_fmt
@@ -33,13 +37,6 @@ repos:
         files: \.sol$
         pass_filenames: false
         language: system
-      - id: solhint
-        name: solhint
-        entry: solhint '**/*.sol'
-        files: \.sol$
-        pass_filenames: false
-        language: node
-        additional_dependencies: [solhint@5.0.2]
   - repo: https://github.com/jumanjihouse/pre-commit-hook-yamlfmt
     rev: 0.2.3
     hooks:
