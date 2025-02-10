@@ -22,7 +22,7 @@ repos:
       - id: mythril
         exclude: ^(script|test)/
   - repo: https://github.com/crytic/slither
-    rev: 16fd330723aca93dc3342dee77340e4b344dc732
+    rev: 0.11.0
     hooks:
       - id: slither
   - repo: https://github.com/protofire/solhint
